@@ -1,1 +1,5 @@
-*.sw?
+*.swn
+*.swo
+*.swp
+*.swl
+*.swm

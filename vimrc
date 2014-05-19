@@ -1,10 +1,26 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'Valloric/YouCompleteMe'
+
 let mapleader = ","
 
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#infect('bundle/colors')
+call pathogen#helptags() 
 
 set t_Co=256
+let g:solarized_diffmode="high"    "default value is normal
+
+if has("gui_macvim")
+  set background=light
+endif
+
+syntax enable
 colorscheme solarized
 
 "set vb t_vb=
@@ -83,3 +99,8 @@ set wrap
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+set paste
+
+cnoremap mk. !mkdir -p <c-r>=expand("%:h")<cr>/
+au BufNewFile,BufRead *.ngslim set filetype=slim

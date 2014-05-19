@@ -1,10 +1,11 @@
 [user]
-	name = Adam C. Baker
-	email = adam.durandal@gmail.com
+	name = Jeremy Karmel
+	email = jkarmel@me.com
 [color]
 	ui = true
 [core]
 	excludesfile = ~/.gitignore
+	editor = /usr/local/bin/vim
 [pull]
 	default = simple
 [push]
